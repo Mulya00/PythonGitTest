@@ -1,18 +1,25 @@
-print("Hello stranger! What's your name?")
-name = input()
+import time
+
+name = input("Hello stranger! What's your name?\n")
+
 print(name + " Welcome to the fire program!")
 
 print("Do you want to see the magic?!")
-symbol = input()
+input()
 print("Ok, let's go!")
-print(" ")
 
-n = 50
-for i in range(1,n+1):
-    if i <= n//2+1:
-        for j in range(i):
-            print('*',end='')
-    elif i >n//2+1:
-        for j in range(n//2,0,-1):
-            print('*',end='')
+while True:
+    n = int(input('Enter any number after 10\n'))
+    if n > 10:
+        break
+    else:
+        continue
+
+for y in range(1, (n // 2) + 2):
+    print("*" * y, end="")
+    time.sleep(0.1)
+    print()
+for y in range(n // 2, 0, -1):
+    print("*" * y, end="")
+    time.sleep(0.1)
     print()
